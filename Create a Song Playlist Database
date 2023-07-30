@@ -1,4 +1,5 @@
 --Create Song Playlist
+
 CREATE TABLE songs (
     id INTEGER PRIMARY KEY,
     title TEXT,
