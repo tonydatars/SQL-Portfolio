@@ -1,0 +1,33 @@
+--Create an eye glass store database
+
+CREATE TABLE eyeglasses 
+(id INTEGER PRIMARY KEY, 
+name TEXT, 
+quantity INTEGER, 
+price INTEGER, 
+size TEXT);
+
+INSERT INTO eyeglasses VALUES (1, "Reading", 5, 24, "Medium");
+INSERT INTO eyeglasses VALUES (2, "Sky", 4, 15, "Medium");
+INSERT INTO eyeglasses VALUES (3, "Hollywood", 22, 195, "XLarge");
+INSERT INTO eyeglasses VALUES (4, "Oldies", 20, 7, "Medium");
+INSERT INTO eyeglasses VALUES (5, "Driver", 5, 18, "Large");
+INSERT INTO eyeglasses VALUES (6, "XRay", 1, 40, "Large");
+INSERT INTO eyeglasses VALUES (8, "Shortie", 15, 34, "XXSmall");
+INSERT INTO eyeglasses VALUES (9, "Wally", 33, 18, "Small");
+INSERT INTO eyeglasses VALUES (10, "Hollyweird", 11, 98, "XXXLarge");
+INSERT INTO eyeglasses VALUES (11, "Smiley", 23, 17, "Medium");
+INSERT INTO eyeglasses VALUES (12, "Smoothy", 67, 8, "Medium");
+INSERT INTO eyeglasses VALUES (13, "Presidential", 21, 44, "XLarge");
+INSERT INTO eyeglasses VALUES (14, "Fury", 1, 158, "XLarge");
+INSERT INTO eyeglasses VALUES (15, "Accounting", 50, 2, "Small");
+
+--show all eyeglasses sorted by price?
+SELECT * FROM eyeglasses 
+ORDER BY (name) ASC;
+
+--what are the most 5 popular items? 
+SELECT name, price, quantity
+FROM eyeglasses
+ORDER BY price DESC
+limit 5; 
